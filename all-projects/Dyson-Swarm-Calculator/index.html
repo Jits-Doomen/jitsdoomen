@@ -1,5 +1,4 @@
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,81 +24,53 @@
 
 <div class="content">
 
-  <a href="../" style="color:#3da9fc;text-decoration:none;font-size:14px;">← All Projects</a>
+  <a href="../" class="back-link">← All Projects</a>
 
-  <h1 style="margin-top:20px;">Dyson Swarm Calculator</h1>
+  <h1 class="project-title">Dyson Swarm Calculator</h1>
+  <div class="project-meta">Python Tool · Type II Civilizational Engineering · 2026</div>
 
-  <div class="content">
-    <p>A physics based simulator for Type II Kardashev Civilizational Engineering.
-  </div>
-
-  <div class="content">
+  <div class="section">
     <h2>Introduction</h2>
-    <p>
-      <br>
-      This engine models the physical and logistical requirements for constructing a Dyson Swarm (a megastructure of a lot of solar collectors) around a G-type star (Like Sol: G2V). It turns astrophysical concepts into easily-readable engineering data, for example: construction timelines, planetary consumption, and orbital info.
+    <p>A physics-based simulator for Type II Kardashev civilizational engineering. This engine models the physical and logistical requirements for constructing a Dyson Swarm — a megastructure of solar collectors — around a G-type star like Sol (G2V). It turns astrophysical concepts into readable engineering data: construction timelines, planetary consumption, and orbital parameters.</p>
   </div>
 
-  <div class="content">
+  <div class="section">
     <h2>Core Physics</h2>
-    <p>
-      <br>
-      The simulator evaluates the swarm's possibility by solving four primary variables:
-      <br><br>
-      1. Thermal Equilibrium (The "Goldilocks" Radius)
-      <br>
-      Using the Stefan-Boltzmann Law, we calculate the distance where a satellite maintains a specific operating temperature. This prevents the swarm from melting or freezing.
-      <br><br>
-      2. Orbital Dynamics
-      <br>
-      Utilizing Kepler's Third Law, the engine determines the orbital period and the necessary Delta-V to reach the swarm's destination from a 1 AU (An Around Earth) starting point.
-      <br>
-      The simulator evaluates the swarm's possibility by solving four primary variables:
-      <br><br>
-      3. The Statite Limit (Radiation Pressure)
-      <br>
-      A critical feature of this engine is the calculation of the Area-to-Mass (A/m) Ratio. This determines if a satellite is "Heavy" (gravity dominated) or a "Light Sail" (radiation pressure dominated).
-      <br><br>
-      4. Exponential Growth using Sigmoid functions
-      <br>
-      Unlike linear construction models, this simulator accounts for Positive Feedback Loops. It models self-replicating robots that use the energy from active satellites to accelerate the production of new ones.
-    <p>
+    <ul>
+      <li><strong style="color:white;">Thermal Equilibrium (Goldilocks Radius)</strong> — Using the Stefan-Boltzmann Law, the distance where a satellite maintains a specific operating temperature is calculated, preventing the swarm from melting or freezing.</li>
+      <li><strong style="color:white;">Orbital Dynamics</strong> — Using Kepler's Third Law, the engine determines orbital period and required Δv to reach the swarm's destination from a 1 AU starting point.</li>
+      <li><strong style="color:white;">Statite Limit (Radiation Pressure)</strong> — Calculates the Area-to-Mass ratio to determine whether a satellite is gravity-dominated or a light sail dominated by radiation pressure.</li>
+      <li><strong style="color:white;">Exponential Growth via Sigmoid Functions</strong> — Models self-replicating construction robots with positive feedback loops, accounting for energy from active satellites accelerating production of new ones.</li>
+    </ul>
   </div>
 
-  <div class="content">
-    <h2>Core Contacts</h2>
-    <p>
-      <br>
-      While building this engine. I have run into bottlenecks. For example, Point Source vs Finite disk, whether to use a variable or constant for the growth rate, etc...
-      <br>
-      So I tried to get professional outreach to help me.
-      <br><br>
-      <p>
-      <h2>1. Jonas Seiler (ESA, Advanced Concepts Team).</h2>
-      <br>
-      Explained that my 10^14 a high and optimistic number for satellites per year. Told me that SpaceX launches 2 rockets per week optimistically.
-      <br>
-      Explained to me that the growth of the production capacity would probably look like a sigmoid function.
-      <br><br>
-      <h2>2. Jeanette Heiligers (TU Delft, Faculty of Aerospace Engineering)</h2>
-      <br>
-      Explained a better methodology to work on the project.
-      <br>
-      Explained why "Attitude-Control" was easier/quicker.
-      <br>
-      Explained in detail why active station-keeping would always be a necessity.
-      <br>
-      Explained that in reality there will always be a deviation from the theoretical model.
+  <div class="section">
+    <h2>Expert Contacts</h2>
 
-    <p>
+    <div class="contact-item">
+      <div>
+        <div class="contact-item-title">Jonas Seiler — ESA, Advanced Concepts Team</div>
+        <div class="contact-item-sub">Explained that 10¹⁴ satellites per year is a high and optimistic number given SpaceX launches ~2 rockets per week optimistically. Advised that production capacity growth would likely follow a sigmoid function.</div>
+      </div>
+    </div>
 
-      <br><br><br>
-    <h3><a href="https://github.com/Jits-Doomen/Dyson-Swarm-Calculator" class="clean-link">Visit Project on GitHub</a></h3>
+    <div class="contact-item">
+      <div>
+        <div class="contact-item-title">Jeanette Heiligers — TU Delft, Faculty of Aerospace Engineering</div>
+        <div class="contact-item-sub">Provided a better methodology for the project. Explained why attitude-control was easier and quicker, why active station-keeping would always be a necessity, and that real-world results will always deviate from the theoretical model.</div>
+      </div>
+    </div>
   </div>
+
+  <div class="section">
+    <h2>Source Code</h2>
+    <p>The full project is available on GitHub.</p>
+    <a href="https://github.com/Jits-Doomen/Dyson-Swarm-Calculator" class="pdf-btn">View on GitHub</a>
+  </div>
+
 </div>
 
 <footer>© 2026 Jits Doomen</footer>
-
 <script src="../../js/menu.js"></script>
 </body>
 </html>
