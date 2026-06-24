@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jits Doomen - Dyson Swarm Calculator</title>
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<div id="sidebar" class="sidebar">
+  <button id="closeBtn">&times;</button>
+  <h2>Jits Doomen</h2>
+  <a href="../../home/">Home</a>
+  <a href="../../about/">About</a>
+  <a href="../../current-project/">Current Project</a>
+  <a href="../../all-projects/">All Projects</a>
+  <a href="../../contact/">Contact</a>
+</div>
+
+<header class="topbar">
+  <button id="menuBtn">☰</button>
+  <h2>Jits Doomen</h2>
+</header>
+
+<div class="content">
+
+  <a href="../" style="color:#3da9fc;text-decoration:none;font-size:14px;">← All Projects</a>
+
+  <h1 style="margin-top:20px;">Dyson Swarm Calculator</h1>
+
+  <div class="content">
+    <p>A physics based simulator for Type II Kardashev Civilizational Engineering.
+  </div>
+
+  <div class="content">
+    <h2>Introduction</h2>
+    <p>
+      <br>
+      This engine models the physical and logistical requirements for constructing a Dyson Swarm (a megastructure of a lot of solar collectors) around a G-type star (Like Sol: G2V). It turns astrophysical concepts into easily-readable engineering data, for example: construction timelines, planetary consumption, and orbital info.
+  </div>
+
+  <div class="content">
+    <h2>Core Physics</h2>
+    <p>
+      <br>
+      The simulator evaluates the swarm's possibility by solving four primary variables:
+      <br><br>
+      1. Thermal Equilibrium (The "Goldilocks" Radius)
+      <br>
+      Using the Stefan-Boltzmann Law, we calculate the distance where a satellite maintains a specific operating temperature. This prevents the swarm from melting or freezing.
+      <br><br>
+      2. Orbital Dynamics
+      <br>
+      Utilizing Kepler's Third Law, the engine determines the orbital period and the necessary Delta-V to reach the swarm's destination from a 1 AU (An Around Earth) starting point.
+      <br>
+      The simulator evaluates the swarm's possibility by solving four primary variables:
+      <br><br>
+      3. The Statite Limit (Radiation Pressure)
+      <br>
+      A critical feature of this engine is the calculation of the Area-to-Mass (A/m) Ratio. This determines if a satellite is "Heavy" (gravity dominated) or a "Light Sail" (radiation pressure dominated).
+      <br><br>
+      4. Exponential Growth using Sigmoid functions
+      <br>
+      Unlike linear construction models, this simulator accounts for Positive Feedback Loops. It models self-replicating robots that use the energy from active satellites to accelerate the production of new ones.
+    <p>
+  </div>
+
+  <div class="content">
+    <h2>Core Contacts</h2>
+    <p>
+      <br>
+      While building this engine. I have run into bottlenecks. For example, Point Source vs Finite disk, whether to use a variable or constant for the growth rate, etc...
+      <br>
+      So I tried to get professional outreach to help me.
+      <br><br>
+      <p>
+      <h2>1. Jonas Seiler (ESA, Advanced Concepts Team).</h2>
+      <br>
+      Explained that my 10^14 a high and optimistic number for satellites per year. Told me that SpaceX launches 2 rockets per week optimistically.
+      <br>
+      Explained to me that the growth of the production capacity would probably look like a sigmoid function.
+      <br><br>
+      <h2>2. Jeanette Heiligers (TU Delft, Faculty of Aerospace Engineering)</h2>
+      <br>
+      Explained a better methodology to work on the project.
+      <br>
+      Explained why "Attitude-Control" was easier/quicker.
+      <br>
+      Explained in detail why active station-keeping would always be a necessity.
+      <br>
+      Explained that in reality there will always be a deviation from the theoretical model.
+
+    <p>
+
+      <br><br><br>
+    <h3><a href="https://github.com/Jits-Doomen/Dyson-Swarm-Calculator" class="clean-link">Visit Project on GitHub</a></h3>
+  </div>
+</div>
+
+<footer>© 2026 Jits Doomen</footer>
+
+<script src="../../js/menu.js"></script>
+</body>
+</html>
