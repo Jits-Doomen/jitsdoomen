@@ -1,0 +1,158 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#07111f;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.topbar{
+    height:60px;
+    background:#081a2f;
+
+    border-bottom:2px solid #3da9fc;
+
+    display:flex;
+    align-items:center;
+    gap:20px;
+
+    padding:0 20px;
+}
+
+#menuBtn,
+#closeBtn{
+    background:none;
+    border:none;
+
+    color:white;
+
+    font-size:20px;
+
+    cursor:pointer;
+}
+
+.sidebar{
+    position:fixed;
+
+    top:0;
+    left:-260px;
+
+    width:250px;
+    height:100%;
+
+    background:#081a2f;
+
+    padding:20px;
+
+    transition:.3s;
+
+    z-index:999;
+
+    border-right:2px solid #3da9fc;
+}
+
+.sidebar.active{
+    left:0;
+}
+
+.sidebar h2{
+    margin:20px 0;
+}
+
+.sidebar a{
+
+    display:block;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+}
+
+.sidebar a:hover{
+    color:#3da9fc;
+}
+
+.hero{
+
+    height:450px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.5),
+        rgba(0,0,0,.7)
+    ),
+    url("../images/hero.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+}
+
+.hero h1{
+    font-size:70px;
+}
+
+.hero p{
+    font-size:24px;
+    margin-top:15px;
+}
+
+.content{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:60px 20px;
+}
+
+.card{
+
+    background:#10253f;
+
+    border-radius:12px;
+
+    padding:25px;
+}
+
+footer{
+
+    margin-top:50px;
+
+    text-align:center;
+
+    padding:25px;
+
+    background:#081a2f;
+
+    border-top:2px solid #3da9fc;
+}
+
+.pdf-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #3da9fc;
+    color: #07111f;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.pdf-btn:hover {
+    background: #5ab8fd;
+}
