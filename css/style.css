@@ -14,7 +14,7 @@ body{
     height:60px;
     background:#081a2f;
 
-    border-bottom:2px solid #3da9fc;
+    border-bottom:2px solid #0a0a0a;
 
     display:flex;
     align-items:center;
@@ -52,7 +52,7 @@ body{
 
     z-index:999;
 
-    border-right:2px solid #3da9fc;
+    border-right:2px solid #0a0a0a;
 }
 
 .sidebar.active{
@@ -76,7 +76,7 @@ body{
 }
 
 .sidebar a:hover{
-    color:#3da9fc;
+    color:#0a0a0a;
 }
 
 .hero{
@@ -147,14 +147,14 @@ body{
 }
 
 .card-link:hover .card{
-    border:1px solid #3da9fc;
+    border:1px solid #0a0a0a;
 }
 
 .pdf-btn{
     display:inline-block;
     margin-top:15px;
     padding:10px 20px;
-    background:#3da9fc;
+    background:#0a0a0a;
     color:#07111f;
     text-decoration:none;
     border-radius:8px;
@@ -175,7 +175,7 @@ footer{
 
     background:#081a2f;
 
-    border-top:2px solid #3da9fc;
+    border-top:2px solid #0a0a0a;
 }
 
 .clean-link {
