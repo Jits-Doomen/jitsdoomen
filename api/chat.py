@@ -11,7 +11,6 @@ class handler(BaseHTTPRequestHandler):
         user_query = data.get("query", "")
 
         API_KEY = os.environ.get("LLM_API_KEY", "")
-
         API_URL = "https://api.openai.com/v1/chat/completions"
         TARGET_MODEL = "gpt-4o-mini"
 
@@ -25,7 +24,7 @@ class handler(BaseHTTPRequestHandler):
             "messages": [
                 {
                     "role": "system",
-                    "content": "You are Connor. An elite physics intelligence core. Frame separating mass dynamics through strict momentum conservation. Answer directly in clean plaintext prose. Do not use markdown code blocks or LaTeX formatting symbols like $ or $$."
+                    "content": "You are Connor V4. An elite physics intelligence core. Frame separating mass dynamics through strict momentum conservation. Answer directly in clean plaintext prose. Do not use markdown code blocks or LaTeX formatting symbols like $ or $$."
                 },
                 {"role": "user", "content": user_query}
             ],
