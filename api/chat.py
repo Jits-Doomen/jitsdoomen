@@ -10,8 +10,10 @@ class handler(BaseHTTPRequestHandler):
         data = json.loads(post_data.decode('utf-8'))
         user_query = data.get("query", "")
 
-        API_KEY = os.environ.get("LLM_API_KEY", "jouw_reserve_api_key")
+        API_KEY = os.environ.get("LLM_API_KEY", "")
+
         API_URL = "https://api.openai.com/v1/chat/completions"
+        TARGET_MODEL = "gpt-4o-mini"
 
         headers = {
             "Authorization": f"Bearer {API_KEY}",
@@ -19,11 +21,11 @@ class handler(BaseHTTPRequestHandler):
         }
 
         payload = {
-            "model": "gpt-4o-mini",
+            "model": TARGET_MODEL,
             "messages": [
                 {
                     "role": "system",
-                    "content": "You are Connor V4. An elite physics intelligence core. Frame separating mass dynamics through strict momentum conservation... Use clean plaintext notation, NO LaTeX symbols like $ or $$, and no markdown code blocks."
+                    "content": "You are Connor. An elite physics intelligence core. Frame separating mass dynamics through strict momentum conservation. Answer directly in clean plaintext prose. Do not use markdown code blocks or LaTeX formatting symbols like $ or $$."
                 },
                 {"role": "user", "content": user_query}
             ],
@@ -33,7 +35,14 @@ class handler(BaseHTTPRequestHandler):
         try:
             response = requests.post(API_URL, headers=headers, json=payload)
             response_json = response.json()
-            connor_answer = response_json['choices'][0]['message']['content']
+
+            if "choices" in response_json:
+                connor_answer = response_json['choices'][0]['message']['content']
+            elif "error" in response_json:
+                connor_answer = f"API Provider Error: {response_json['error'].get('message', 'Unknown provider error')}"
+            else:
+                connor_answer = response_json.get("message", {}).get("content", "Error: Unexpected API response structure.")
+
         except Exception as e:
             connor_answer = f"Core Fault Intercepted: {str(e)}"
 
