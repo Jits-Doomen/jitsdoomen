@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jits Doomen - ICON</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        html {
+          scroll-behavior: smooth;
+        }
+
+        .category-scroll-container {
+          display: flex;
+          gap: 15px;
+          overflow-x: auto;
+          padding: 15px 10px;
+          background: #f4f6f8;
+          border-radius: 8px;
+          margin-bottom: 20px;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .category-btn {
+          display: inline-block;
+          padding: 8px 16px;
+          background-color: #3da9fc;
+          color: white;
+          text-decoration: none;
+          border-radius: 4px;
+          font-weight: bold;
+          font-size: 14px;
+          transition: background 0.2s ease;
+        }
+
+        .category-btn:hover {
+          background-color: #007bc4;
+        }
+
+        /* Clean copy-pasteable formulas table */
+        .formula-table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 15px 0;
+          font-size: 16px;
+          text-align: left;
+        }
+
+        .formula-table th, .formula-table td {
+          padding: 12px 15px;
+          border: 1px solid #ddd;
+        }
+
+        .formula-table th {
+          background-color: #3da9fc;
+          color: white;
+        }
+
+        .formula-table tr:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+        .code-input {
+          font-family: 'Courier New', Courier, monospace;
+          background: #f4f4f4;
+          padding: 4px 8px;
+          border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="sidebar" class="sidebar">
+    <button id="closeBtn">&times;</button>
+    <h2>Jits Doomen</h2>
+    <a href="../home/">Home</a>
+    <a href="../about/">About</a>
+    <a href="../current-project/">Current Project</a>
+    <a href="../all-projects/">All Projects</a>
+    <a href="../contact/">Contact</a>
+</div>
+
+<header class="topbar">
+    <button id="menuBtn">☰</button>
+    <h2>Jits Doomen</h2>
+</header>
+
+<div class="content">
+
+    <a href="../" style="color:#3da9fc;text-decoration:none;font-size:14px;">← All Projects</a>
+
+    <h1 style="margin-top:20px;">Formula Database</h1>
+
+    <div class="category-scroll-container">
+        <a href="#gravity" class="category-btn">Gravity</a>
+        <a href="#vibrations" class="category-btn">Vibrations</a>
+        <a href="#liquid" class="category-btn">Liquid</a>
+    </div>
+
+    <div id="gravity" class="content" style="scroll-margin-top: 80px;">
+        <h2>Gravity</h2>
+        <p>Formulas related to artificial gravity, centripetal forces, and orbital loads.</p>
+
+        <table class="formula-table">
+            <thead>
+            <tr>
+                <th>Concept / Parameter</th>
+                <th>Formula</th>
+                <th>Description & Units</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><b>Artificial Gravity</b></td>
+                <td class="code-input">a = ω² * r</td>
+                <td>Centripetal acceleration where ω is rad/s and r is radius (m).</td>
+            </tr>
+            <tr>
+                <td><b>Newton's Gravity</b></td>
+                <td class="code-input">F = G * (m1 * m2) / r²</td>
+                <td>Gravitational force between two masses.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="vibrations" class="content" style="scroll-margin-top: 80px;">
+        <h2>Vibrations</h2>
+        <p>Formulas tracking structural resonance, frequency cycles, and dampening profiles.</p>
+
+        <table class="formula-table">
+            <thead>
+            <tr>
+                <th>Concept / Parameter</th>
+                <th>Formula</th>
+                <th>Description & Units</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><b>Natural Frequency</b></td>
+                <td class="code-input">f = (1 / 2π) * √(k / m)</td>
+                <td>Resonant frequency of a simple mass-spring system.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="liquid" class="content" style="scroll-margin-top: 80px;">
+        <h2>Liquid</h2>
+        <p>Formulas for fluid dynamics, tank sloshing, and propellant flow kinetics.</p>
+
+        <table class="formula-table">
+            <thead>
+            <tr>
+                <th>Concept / Parameter</th>
+                <th>Formula</th>
+                <th>Description & Units</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><b>Hydrostatic Pressure</b></td>
+                <td class="code-input">P = ρ * g * h</td>
+                <td>Pressure exerted by a fluid at equilibrium due to gravity.</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<footer>© 2026 Jits Doomen</footer>
+
+<script src="../js/menu.js"></script>
+</body>
+</html>
