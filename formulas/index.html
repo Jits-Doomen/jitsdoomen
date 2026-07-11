@@ -11,71 +11,97 @@
           scroll-behavior: smooth;
         }
 
-        .category-scroll-container {
-          display: flex;
-          gap: 12px;
-          overflow-x: auto;
-          padding: 10px 0;
-          margin-bottom: 30px;
-          white-space: nowrap;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .category-nav{
+        position:sticky;
+        top:70px;
+        z-index:100;
+        background:#16161a;
+        padding:18px 0;
+        margin:30px 0;
         }
 
-        .category-btn {
-          display: inline-block;
-          padding: 8px 16px;
-          background-color: #3da9fc;
-          color: #fffffe;
-          text-decoration: none;
-          border-radius: 6px;
-          font-weight: 600;
-          font-size: 14px;
-          transition: background 0.2s ease;
+        .category-group{
+        margin-bottom:25px;
+        }
+
+        .category-group h3{
+        color:white;
+        margin-bottom:10px;
+        }
+
+        .subcategory-scroll{
+        display:flex;
+        gap:12px;
+        overflow-x:auto;
+        padding-bottom:8px;
+        }
+
+        .category-btn{
+        padding:10px 18px;
+        border-radius:999px;
+        background:#222;
+        color:white;
+        text-decoration:none;
+        transition:.25s;
+        white-space:nowrap;
+        }
+
+        .category-btn:hover{
+        background:#3da9fc;
         }
 
         .category-btn:hover {
           background-color: #007bc4;
         }
 
-        .formula-table {
-          width: 100%;
-          border-collapse: collapse;
-          margin: 20px 0 40px 0;
-          font-size: 15px;
-          text-align: left;
-          background: #16161a;
-          border-radius: 8px;
-          overflow: hidden;
-          border: 1px solid #242629;
+        .formula-table{
+          width:100%;
+          border-collapse:separate;
+          border-spacing:0;
+          margin:25px 0 50px;
+          background:#1b1b22;
+          border-radius:14px;
+          overflow:hidden;
+          box-shadow:0 10px 30px rgba(0,0,0,.3);
         }
 
-        .formula-table th {
-          background-color: #3da9fc;
-          color: #fffffe;
-          padding: 14px 16px;
-          font-weight: 600;
+        .formula-table th{
+          background:#3da9fc;
+          color:white;
+          padding:18px;
+          text-transform:uppercase;
+          font-size:13px;
+          letter-spacing:.05em;
+          position:sticky;
+          top:135px;
+          z-index:5;
         }
 
-        .formula-table td {
-          padding: 14px 16px;
-          border-bottom: 1px solid #242629;
-          color: #fffffe;
-          background-color: #16161a;
+        .formula-table td{
+          padding:18px;
+          border-top:1px solid rgba(255,255,255,.08);
         }
 
         .formula-table tr:last-child td {
           border-bottom: none;
         }
 
-        .code-input {
-          font-family: 'Fira Code', 'Courier New', Courier, monospace;
-          background: #010101;
-          color: #00ebc7;
-          padding: 6px 12px;
-          border-radius: 4px;
-          border: 1px solid #242629;
-          display: inline-block;
-          word-break: break-all;
+        .formula-table tbody tr:nth-child(even){
+            background:#202028;
+        }
+
+        .formula-table tbody tr:hover{
+            background:#2b313d;
+        }
+
+        .code-input{
+          display:inline-block;
+          padding:8px 14px;
+          border-radius:8px;
+          background:#0d1015;
+          color:#4df2c5;
+          border:1px solid #2d3645;
+          font-weight:600;
         }
     </style>
 </head>
@@ -103,11 +129,88 @@
 
     <h1 style="margin-top:20px;">Formula Database</h1>
 
-    <div class="category-scroll-container">
-        <a href="#Work & Energy" class="category-btn">Work-&-Energy</a>
+    <div class="category-nav">
+
+        <div class="category-group">
+            <h3>Mechanics</h3>
+
+            <div class="subcategory-scroll">
+                <a href="#kinematics" class="category-btn">Kinematics</a>
+                <a href="#work-energy" class="category-btn">Work & Energy</a>
+                <a href="#rotation" class="category-btn">Rotation</a>
+            </div>
+        </div>
+
+        <div class="category-group">
+            <h3>Thermodynamics</h3>
+
+            <div class="subcategory-scroll">
+                <a href="#heat" class="category-btn">Heat</a>
+                <a href="#gas-laws" class="category-btn">Gas Laws</a>
+            </div>
+        </div>
+
+        <div class="category-group">
+            <h3>Electricity</h3>
+
+            <div class="subcategory-scroll">
+                <a href="#electrostatics" class="category-btn">Electrostatics</a>
+                <a href="#circuits" class="category-btn">Circuits</a>
+            </div>
+        </div>
+
     </div>
 
-    <div id="Work & Energy" class="content" style="scroll-margin-top: 80px; padding: 0;">
+    <section id="kinematics"> class="content" style="scroll-margin-top: 80px; padding: 0;">
+        <h2>Mechanics</h2>
+        <table class="formula-table">
+            <thead>
+            <tr>
+                <th style="width: 25%;">Name</th>
+                <th style="width: 35%;">Formula</th>
+                <th style="width: 40%;">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><b>Average velocity</b></td>
+                <td><span class="code-input">v = d / t</span></td>
+                <td>Displacement per unit time for uniform motion.</td>
+            </tr>
+            <tr>
+                <td><b>Average acceleration</b></td>
+                <td><span class="code-input">a = Δv / Δt</span></td>
+                <td>Rate of change of velocity over time.</td>
+            </tr>
+            <tr>
+                <td><b>Kinematic equation 1</b></td>
+                <td><span class="code-input">v = v₀ + at</span></td>
+                <td>Final velocity under constant acceleration.</td>
+            </tr>
+            <tr>
+                <td><b>Kinematic equation 2</b></td>
+                <td><span class="code-input">x = x₀ + v₀t + ½at²</span></td>
+                <td>Velocity as a function of displacement (time-independent).</td>
+            </tr>
+            <tr>
+                <td><b>Projectile range</b></td>
+                <td><span class="code-input">R = v₀²sin(2θ) / g</span></td>
+                <td>Horizontal range of a projectile launched and landing at the same height.</td>
+            </tr>
+            <tr>
+                <td><b>Projectile max height</b></td>
+                <td><span class="code-input">H = v₀²sin²θ / (2g)</span></td>
+                <td>Maximum height reached by a projectile.</td>
+            </tr>
+            <tr>
+                <td><b>Time of flight</b></td>
+                <td><span class="code-input">T = 2v₀sinθ / g</span></td>
+                <td>Total time a projectile stays in the air.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <section id="work-energy"> class="content" style="scroll-margin-top: 80px; padding: 0;">
         <h2>Work & Energy</h2>
         <table class="formula-table">
             <thead>
@@ -119,18 +222,167 @@
             </thead>
             <tbody>
             <tr>
-                <td><b>Work</b></td>
-                <td><span class="code-input">W = F<sub>s</sub></span></td>
-                <td>The formula to calculate work.</td>
+                <td><b>Newton's 2nd Law</b></td>
+                <td><span class="code-input">F = ma</span></td>
+                <td>Net force equals mass times acceleration.</td>
             </tr>
             <tr>
-                <td><b>Newton's Gravity</b></td>
-                <td><span class="code-input">E<sub>k</sub> = &frac12;mv²</span></td>
-                <td>Gravitational force between two masses.</td>
+                <td><b>Weight</b></td>
+                <td><span class="code-input">W = mg</span></td>
+                <td>Gravitational force on a mass near a planet's surface.</td>
+            </tr>
+            <tr>
+                <td><b>Newton's Law of Gravitation</b></td>
+                <td><span class="code-input">F = G·m₁m₂ / r²</span></td>
+                <td>Attractive force between two point masses.</td>
+            </tr>
+            <tr>
+                <td><b>Momentum</b></td>
+                <td><span class="code-input">p = mv</span></td>
+                <td>Linear momentum of a moving mass.</td>
+            </tr>
+            <tr>
+                <td><b>Impulse–momentum theorem</b></td>
+                <td><span class="code-input">J = FΔt = Δp</span></td>
+                <td>Impulse equals change in momentum.</td>
+            </tr>
+            <tr>
+                 <td><b>Newton's 2nd Law</b></td>
+                 <td><span class="code-input">F = ma</span></td>
+                 <td>Net force equals mass times acceleration.</td>
+            </tr>
+            <tr>
+                <td><b>Conservation of momentum</b></td>
+                <td><span class="code-input">m₁v₁ + m₂v₂ = m₁v₁' + m₂v₂'</span></td>
+                <td>Total momentum is conserved in a closed system (collisions).</td>
+            </tr>
+            <tr>
+                <td><b>Friction force</b></td>
+                <td><span class="code-input">f = μN</span></td>
+                <td>Resistive force between two surfaces in contact.</td>
+            </tr>
+            <tr>
+                <td><b>Work done by a force</b></td>
+                <td><span class="code-input">W = Fd·cosθ</span></td>
+                <td>Energy transferred by a force acting over a displacement.</td>
+            </tr>
+            <tr>
+                <td><b>Kinetic energy</b></td>
+                <td><span class="code-input">KE = ½mv²</span></td>
+                <td>Energy of motion.</td>
+            </tr>
+            <tr>
+                <td><b>Gravitational potential energy</b></td>
+                <td><span class="code-input">PE = mgh</span></td>
+                <td>Energy stored due to height in a uniform gravitational field.</td>
+            </tr>
+            <tr>
+                <td><b>Work–energy theorem</b></td>
+                <td><span class="code-input">W_net = ΔKE</span></td>
+                <td>Net work done equals the change in kinetic energy.</td>
+            </tr>
+            <tr>
+                <td><b>Power</b></td>
+                <td><span class="code-input">P = W/t = Fv</span></td>
+                <td>Rate of doing work or transferring energy.</td>
+            </tr>
+            <tr>
+                <td><b>Hooke's Law</b></td>
+                <td><span class="code-input">F = −kx</span></td>
+                <td>Restoring force of an ideal spring, proportional to displacement.</td>
+            </tr>
+            <tr>
+                <td><b>Elastic potential energy</b></td>
+                <td><span class="code-input">PE_spring = ½kx²</span></td>
+                <td>Energy stored in a stretched/compressed spring.</td>
             </tr>
             </tbody>
         </table>
-    </div>
+    </section>
+        <section id="rotation"> class="content" style="scroll-margin-top: 80px; padding: 0;">
+        <h2>Rotational Motion</h2>
+        <table class="formula-table">
+            <thead>
+            <tr>
+                <th style="width: 25%;">Name</th>
+                <th style="width: 35%;">Formula</th>
+                <th style="width: 40%;">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><b>Angular velocity</b></td>
+                <td><span class="code-input">ω = Δθ / Δt</span></td>
+                <td>Rate of change of angular position.</td>
+            </tr>
+            <tr>
+                <td><b>Angular acceleration</b></td>
+                <td><span class="code-input">α = Δω / Δt</span></td>
+                <td>Rate of change of angular velocity.</td>
+            </tr>
+            <tr>
+                <td><b>Tangential/centripetal relation</b></td>
+                <td><span class="code-input">v = ωr</span></td>
+                <td>Linear speed at radius r for a rotating body.</td>
+            </tr>
+            <tr>
+                <td><b>Centripetal acceleration</b></td>
+                <td><span class="code-input">a_c = v²/r = ω²r</span></td>
+                <td>Center-seeking acceleration for circular motion.</td>
+            </tr>
+            <tr>
+                <td><b>Centripetal force</b></td>
+                <td><span class="code-input">F_c = mv²/r</span></td>
+                <td>Net inward force required for circular motion.</td>
+            </tr>
+            <tr>
+                <td><b>Torque</b></td>
+                <td><span class="code-input">τ = rF·sinθ = Iα</span></td>
+                <td>Rotational analogue of force.</td>
+            </tr>
+            <tr>
+                <td><b>Moment of inertia (point mass)</b></td>
+                <td><span class="code-input">I = mr²</span></td>
+                <td>Rotational inertia of a point mass about an axis.</td>
+            </tr>
+            <tr>
+                <td><b>Moment of inertia (solid disk/cylinder)</b></td>
+                <td><span class="code-input">I = ½mr²</span></td>
+                <td>Rotational inertia of a uniform solid disk about its central axis.</td>
+            </tr>
+            <tr>
+                <td><b>Moment of inertia (solid sphere)</b></td>
+                <td><span class="code-input">I = (2/5)mr²</span></td>
+                <td>Rotational inertia of a uniform solid sphere about a diameter.</td>
+            </tr>
+            <tr>
+                <td><b>Moment of inertia (thin rod, center)</b></td>
+                <td><span class="code-input">I = (1/12)mL²</span></td>
+                <td>Rotational inertia of a rod about its center, perpendicular to its length.</td>
+            </tr>
+            <tr>
+                <td><b>Angular momentum</b></td>
+                <td><span class="code-input">L = Iω</span></td>
+                <td>Energy stored due to height in a uniform gravitational field.</td>
+            </tr>
+            <tr>
+                <td><b>Conservation of angular momentum</b></td>
+                <td><span class="code-input">I₁ω₁ = I₂ω₂</span></td>
+                <td>Angular momentum is conserved absent external torque.</td>
+            </tr>
+            <tr>
+                <td><b>Rotational kinetic energy</b></td>
+                <td><span class="code-input">KE_rot = ½Iω²</span></td>
+                <td>Kinetic energy due to rotation.</td>
+            </tr>
+            <tr>
+                <td><b>Parallel axis theorem</b></td>
+                <td><span class="code-input">I = I_cm + md²</span></td>
+                <td>Moment of inertia about an axis parallel to one through the center of mass.</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
 
 
 </div>
